@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaawansowany Kalkulator BMI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Kalkulator BMI</h1>
+        <p class="subtitle">Sprawdź swoje BMI oraz szacunkowy poziom tkanki tłuszczowej.</p>
+
+        <form id="bmi-form">
+            <div class="input-group">
+                <label for="gender">Płeć:</label>
+                <select id="gender" required>
+                    <option value="female">Kobieta</option>
+                    <option value="male">Mężczyzna</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="age">Wiek (lata):</label>
+                <input type="number" id="age" min="15" max="120" required placeholder="np. 25">
+            </div>
+
+            <div class="input-group">
+                <label for="height">Wzrost (cm):</label>
+                <input type="number" id="height" min="100" max="250" required placeholder="np. 175">
+            </div>
+
+            <div class="input-group">
+                <label for="weight">Waga (kg):</label>
+                <input type="number" id="weight" min="30" max="300" step="0.1" required placeholder="np. 70.5">
+            </div>
+
+            <button type="submit">Oblicz wynik</button>
+        </form>
+
+        <!-- Tutaj za pomocą JavaScript wstawimy wyniki -->
+        <div id="result" class="hidden"></div>
+    </div>
+
+    <!-- Podłączenie pliku z logiką -->
+    <script src="script.js"></script>
+</body>
+</html>
